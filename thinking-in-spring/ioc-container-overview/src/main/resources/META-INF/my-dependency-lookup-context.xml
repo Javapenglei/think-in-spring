@@ -7,8 +7,21 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         https://www.springframework.org/schema/context/spring-context.xsd">
-    <bean id="user" class="org.geekbang.thinking.in.spring.ioc.overview.domain.User">
+    <bean id="user_pl" class="org.geekbang.thinking.in.spring.ioc.overview.domain.User" primary="true">
         <property name="id" value="2"/>
         <property name="name" value="彭磊"/>
+    </bean>
+    <bean id="beanFactory" class="org.springframework.beans.factory.config.ObjectFactoryCreatingFactoryBean">
+        <property name="targetBeanName" value="user_pl"/>
+    </bean>
+    <bean id="user_zs" class="org.geekbang.thinking.in.spring.ioc.overview.domain.User">
+        <property name="id" value="3"/>
+        <property name="name" value="张三"/>
+    </bean>
+    <bean id="super_user" class="org.geekbang.thinking.in.spring.ioc.overview.domain.MySuperUser" parent="user_pl" >
+        <property name="address" value="长沙"/>
+    </bean>
+    <bean id="s_user" class="org.geekbang.thinking.in.spring.ioc.overview.domain.SuperUser" parent="user_zs">
+        <property name="address" value="北京" />
     </bean>
 </beans>

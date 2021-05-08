@@ -27,7 +27,7 @@ import java.lang.annotation.Target;
  * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  * @since
  */
-@Target(ElementType.TYPE)
-@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.TYPE) //存储的范围
+@Retention(RetentionPolicy.RUNTIME) //存储的范围,此处用的是运行时,用于反射
 public @interface Super {
 }

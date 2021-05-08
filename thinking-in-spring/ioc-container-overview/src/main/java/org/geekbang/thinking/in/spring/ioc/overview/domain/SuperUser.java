@@ -16,6 +16,7 @@
  */
 package org.geekbang.thinking.in.spring.ioc.overview.domain;
 
+import org.geekbang.thinking.in.spring.ioc.overview.annotation.MySuper;
 import org.geekbang.thinking.in.spring.ioc.overview.annotation.Super;
 
 /**
@@ -25,6 +26,7 @@ import org.geekbang.thinking.in.spring.ioc.overview.annotation.Super;
  * @since
  */
 @Super
+@MySuper
 public class SuperUser extends User {
 
     private String address;

@@ -16,6 +16,8 @@
  */
 package org.geekbang.thinking.in.spring.generic;
 
+
+
 import org.springframework.core.GenericCollectionTypeResolver;
 
 import java.lang.reflect.Field;
