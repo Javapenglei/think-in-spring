@@ -16,7 +16,9 @@
  */
 package org.geekbang.thinking.in.spring.ioc.overview.container;
 
+import org.geekbang.thinking.in.spring.ioc.overview.domain.MySuperUser;
 import org.geekbang.thinking.in.spring.ioc.overview.domain.User;
+import org.geekbang.thinking.in.spring.ioc.overview.enums.City;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
@@ -61,6 +63,15 @@ public class AnnotationApplicationContextAsIoCContainerDemo {
         user.setId(1L);
         user.setName("小马哥");
         return user;
+    }
+
+    @Bean
+    public MySuperUser mySuperUser(){
+        MySuperUser  mySuperUser  = new MySuperUser();
+        mySuperUser.setAddress("芙蓉");
+        mySuperUser.setId(2L);
+        mySuperUser.setName("彭磊");
+        return mySuperUser;
     }
 
     private static void lookupCollectionByType(BeanFactory beanFactory) {

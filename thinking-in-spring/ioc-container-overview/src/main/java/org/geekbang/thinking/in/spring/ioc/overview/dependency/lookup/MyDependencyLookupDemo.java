@@ -48,7 +48,7 @@ public class MyDependencyLookupDemo {
     }
 
     /**
-     * 实时查找,复杂类型查找
+     * 实时查找,集合查找
      * @param beanFactory 上下文
      */
     private static void lookupByCollectionByType(BeanFactory beanFactory) {
